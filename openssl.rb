@@ -1,4 +1,6 @@
-load HOMEBREW_LIBRARY/"Formula/openssl.rb"
+(HOMEBREW_LIBRARY/"Formula/openssl.rb").tap do |f|
+  binding.eval(f.read, f.to_s)
+end
 
 Openssl.class_eval do
   patch do
