@@ -1,4 +1,5 @@
-(HOMEBREW_LIBRARY/"Formula/openssl.rb").tap do |f|
+linuxbrew_openssl = File.expand_path("../../Linuxbrew/openssl.rb", __FILE__)
+Pathname.new(linuxbrew_openssl).tap do |f|
   binding.eval(f.read, f.to_s)
 end
 
